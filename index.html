@@ -1,109 +1,129 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Info & Datenschutz - PleaseCatchMe</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        h1, h2 {
-            color: #222;
-        }
-        a {
-            color: #0066cc;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #777;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Info & Datenschutz - PleaseCatchMe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 6px 12px;
+      border: none;
+      background-color: #0066cc;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #004999;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #777;
+    }
+    .lang {
+      display: none;
+    }
+    .lang.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
 <div class="container">
-    <h1>Info & Rechtliches</h1>
+  <div class="lang-switch">
+    <button onclick="switchLang('de')">Deutsch</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
 
+  <!-- Deutsch -->
+  <div class="lang active" id="lang-de">
+    <h1>Info & Rechtliches</h1>
     <h2>Impressum</h2>
     <p>
-        Angaben gemäß § 5 TMG:<br>
-        Akin Tas<br>
-        Postfach 920134<br>
-        30459 Hannover<br>
-        Deutschland<br>
-        E-Mail: <a href="mailto:akin-tas96@hotmail.de">akin-tas96@hotmail.de</a>
+      Angaben gemäß § 5 TMG:<br>
+      Akin Tas<br>
+      Postfach 920134<br>
+      30459 Hannover<br>
+      Deutschland<br>
+      E-Mail: <a href="mailto:akin-tas96@hotmail.de">akin-tas96@hotmail.de</a>
     </p>
-
     <h2>Datenschutzerklärung</h2>
     <p>
-        Diese App verwendet einen anonymen Login via Firebase Authentication. Es werden keine personenbezogenen Daten dauerhaft gespeichert. Es werden ausschließlich Verbindungsdaten (z.B. anonyme UID, Verbindungsstatus) verarbeitet, um das Online-Spiel zu ermöglichen.
+      Diese App verwendet einen anonymen Login via Firebase Authentication. Es werden keine personenbezogenen Daten dauerhaft gespeichert. Es werden ausschließlich Verbindungsdaten (z. B. anonyme UID, Verbindungsstatus) verarbeitet, um das Online-Spiel zu ermöglichen.
     </p>
     <p>
-        Es findet keine Weitergabe von personenbezogenen Daten an Dritte statt. Weitere Informationen zu Firebase und dessen Datenschutzrichtlinien finden Sie unter:
-        <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a>
+      Es findet keine Weitergabe von personenbezogenen Daten an Dritte statt. Weitere Informationen zu Firebase finden Sie unter:
+      <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a>
     </p>
-
-    <h2>Nutzungsbedingungen</h2>
+    <h2>Danksagung</h2>
     <p>
-        Die Nutzung dieser App erfolgt auf eigene Verantwortung. Für eventuelle Schäden oder Datenverluste wird keine Haftung übernommen.
-        Die App wird ohne Garantie auf Verfügbarkeit oder Fehlerfreiheit bereitgestellt.
+      Ein besonderer Dank geht an <strong>Thomas</strong> für den Namen <strong>Gotchya!</strong>.<br>
+      Vielen Dank auch an meine Eltern, meinen Bruder, meine Familie, Freunde und Anne für ihre Unterstützung, Geduld und Motivation.
     </p>
-
-    <h2>Haftungsausschluss</h2>
-    <p>
-        Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
-    </p>
-
-    <h2>Verwendete Bibliotheken</h2>
-    <ul>
-        <li>LibGDX - <a href="https://libgdx.com/" target="_blank">https://libgdx.com/</a></li>
-        <li>Firebase - <a href="https://firebase.google.com/" target="_blank">https://firebase.google.com/</a></li>
-    </ul>
-    <p>
-        Die verwendeten Bibliotheken unterliegen jeweils ihren eigenen Open-Source-Lizenzen.
-    </p>
-
-    <h2>Verwendete Musik</h2>
-    <p>
-        In dieser App wird das Musikstück <strong>"Helios"</strong> von <strong>Jeremy Black</strong> verwendet.<br>
-        Quelle: <a href="https://www.youtube.com/channel/UCwn53FLEtlJ9dNCH8IRtNIA" target="_blank">Jeremy Black auf YouTube</a><br>
-        Bereitgestellt über die <a href="https://www.youtube.com/audiolibrary" target="_blank">YouTube Audio Library</a>.
-    </p>
-
-        <h2>Danksagung</h2>
-    <p>
-        Ein besonderer Dank geht an <strong>Thomas</strong> für die Idee zum Spielnamen <strong>Gotchya!</strong>.<br>
-        Außerdem danke ich meinen Eltern, meinem Bruder, meiner Familie, meinen Freunden und Anne für ihre Unterstützung,
-        Geduld und Motivation während der Entwicklung dieser App.
-    </p>
-
     <h2>Version</h2>
+    <p>PleaseCatchMe v1.0 – Stand: April 2025</p>
+  </div>
+
+  <!-- Englisch -->
+  <div class="lang" id="lang-en">
+    <h1>Info & Legal</h1>
+    <h2>Imprint</h2>
     <p>
-        PleaseCatchMe v1.0 - Stand: April 2025
+      Information according to § 5 TMG:<br>
+      Akin Tas<br>
+      P.O. Box 920134<br>
+      30459 Hannover<br>
+      Germany<br>
+      Email: <a href="mailto:akin-tas96@hotmail.de">akin-tas96@hotmail.de</a>
     </p>
+    <h2>Privacy Policy</h2>
+    <p>
+      This app uses anonymous login via Firebase Authentication. No personal data is permanently stored. Only connection data (e.g. anonymous UID, connection status) is processed to enable online gameplay.
+    </p>
+    <p>
+      No personal data is shared with third parties. More information about Firebase can be found here:
+      <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a>
+    </p>
+    <h2>Credits</h2>
+    <p>
+      Special thanks to <strong>Thomas</strong> for the name <strong>Gotchya!</strong>.<br>
+      Also thanks to my parents, my brother, my family, my friends and Anne for their support, patience and motivation.
+    </p>
+    <h2>Version</h2>
+    <p>PleaseCatchMe v1.0 – as of April 2025</p>
+  </div>
 </div>
 
 <footer>
-    &copy; 2025 Akin Tas. Alle Rechte vorbehalten.
+  &copy; 2025 Akin Tas. All rights reserved.
 </footer>
+
+<script>
+  function switchLang(lang) {
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+  }
+</script>
 </body>
 </html>
